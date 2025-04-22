@@ -8,7 +8,7 @@ on:
             - main
 jobs:
     hello-world:
-        runs-on: ubuntu
+        runs-on: ubuntu-latest
         steps:
             - name: run a one line script.
               run: echo "Hello World"
