@@ -1,4 +1,4 @@
-name: single-event
+name: multi-event
 on:
     push:
         branches:
