@@ -24,3 +24,11 @@ jobs:
           echo "Hello, ${{ github.event.inputs.name }}!"
           echo "Greeting: ${{ github.event.inputs.greeting }}"
           echo "Data: ${{ github.event.inputs.data }}"
+  greet-2nd:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Greeting
+        run: |
+          echo "Hello, ${{ github.event.inputs.name }}!"
+          echo "Greeting: ${{ github.event.inputs.greeting }}"
+          echo "Data: ${{ github.event.inputs.data }}"          
