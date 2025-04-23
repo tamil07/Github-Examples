@@ -7,6 +7,9 @@ jobs:
     test_schedule:
         runs-on: ubuntu-latest
         steps:
-            - name: Not on monday or wednesday
+            - name: Not every time
               if: github.event.schedule == '*/5 * * * *'
               run: echo "Its a scheduled event"
+            - name: Every time
+              if: github.event.schedule != '*/5 * * * *'
+              run: echo "Not a 5 minute cron"
