@@ -1,0 +1,26 @@
+name: manual event
+on: 
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Name of the person to gree'
+        required: true
+        type: string
+      greeting:
+        description: 'Type of greeting'
+        required: true
+        type: string
+      data:
+        description: 'Base64 encoded content of a file'
+        required: false
+        type: string
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Greeting
+        run: |
+          echo "Hello, ${{ github.event.inputs.name }}!"
+          echo "Greeting: ${{ github.event.inputs.greeting }}"
+          echo "Data: ${{ github.event.inputs.data }}"
