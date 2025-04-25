@@ -3,6 +3,7 @@ on:
   repository_dispatch:
     types:
       - webhook
+      - tj
 
 jobs:
   respond-to-dispatch:

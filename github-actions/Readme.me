@@ -14,3 +14,10 @@ curl -X POST \
 -d '{"event_type": "webhook", "client_payload": {"key": "value"} }' \
 https://api.github.com/repos/{owner}/{repo}/dispatches
 ```
+
+
+curl -X POST \
+-H "Accept: application/vnd.github+json" \
+-H "Authorization: token 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" \
+-d '{"event_type": "tj", "client_payload": {"key": "value"} }' \
+https://api.github.com/repos/tamil07/Github-Examples/dispatches
