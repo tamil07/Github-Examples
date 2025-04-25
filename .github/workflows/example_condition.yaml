@@ -1,0 +1,15 @@
+name: "example conditional #1"
+on: [push]
+jobs:
+  hello-world:
+    if: github.repository == 'tamil07/Github-Examples'
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Hello World"
+        run: echo "Hello World"
+  goodbye-moon:
+    if: github.repository == 'octo-org/octo-repo-prod'
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Goodbye Moon"
+        run: echo "goodby moon!"
