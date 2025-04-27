@@ -1,0 +1,22 @@
+name: "testing job depenedencies"
+on:
+  push:
+    branches:
+      - main
+
+env:
+  TJ_KEY: TJ_VALUE
+
+jobs:
+  job1:
+    needs: job2
+    runs-on: ubuntu-latest
+    steps:
+      - name: "First step"
+        run: echo "Second hello world $TJ_KEY"
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "second job"
+        if: ${{ github.event_name == 'push' }}
+        run: echo "second hello world "
